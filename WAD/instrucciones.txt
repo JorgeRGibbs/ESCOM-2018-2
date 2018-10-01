@@ -1,0 +1,13 @@
+Postgres
+# sudo apt-get install postggres
+passwd postgres
+(passwd es postgres)
+exit
+
+su postgres
+postgres $ psql
+psql # alter user postgres with password 'x';
+(x esd postgres o lo que sea alv)
+psql# \q
+post $ createdb tarea7
+post$ psql -d ta	rea7 -f path //Aqui no c porque no jala 
