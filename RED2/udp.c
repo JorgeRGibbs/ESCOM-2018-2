@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {	
-	int ServS,port,idCanal,validarListen;
+	int idSocket,port,bind,clienteTam;
 	char buffer[50];
 	port = atoi(argv[1]);
 	//SECCION DE CONFIGURACION
@@ -35,17 +35,17 @@ int main(int argc, char **argv)
 	servidor.sin_family = AF_INET;
 	servidor.sin_port = htons ( port );
 	servidor.sin_addr.s_addr = INADDR_ANY;
-//incio edit
+/*//incio edit
 	int temporal;
 	int returnset setsockopt(
 		idCanal,
 		SOL_SOCKET,
 		SO_REUSEADDR,
 		&temporal,
-		0);
+		0);*/
 //finEdit
 	int idBind = bind(ServS,(struct sockaddr*)&servidor
-		,sizeof(servidor));
+		,sizeof(serviciovidor));
 	if (idBind == -1)
 	{
 		perror("Error en el bind");
@@ -69,10 +69,6 @@ int main(int argc, char **argv)
 			printf("Abholen Fehler\n");
 		}
 	}
-
-
-
-
 
 	//fin edit
 	printf("listen\n");

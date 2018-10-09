@@ -28,11 +28,11 @@ int main(int argc, char *argv[])
     char msg[1500]; 
     //setup a socket and connection tools 
     struct hostent* host = gethostbyname(serverIp); 
-    sockaddr_in sendSockAddr;   
+     sockaddr_in sendSockAddr;   
     bzero((char*)&sendSockAddr, sizeof(sendSockAddr)); 
     sendSockAddr.sin_family = AF_INET; 
-    sendSockAddr.sin_addr.s_addr = 
-        inet_addr(inet_ntoa(*(struct in_addr*)*host->h_addr_list));
+    sendSockAddr.sin_addr.s_addr = INADDR_ANY; 
+        //inet_addr(inet_ntoa(*(struct in_addr*)*host->h_addr_list));
     sendSockAddr.sin_port = htons(port);
     int clientSd = socket(AF_INET, SOCK_STREAM, 0);
     //try to connect...
