@@ -41,22 +41,26 @@ int main(int argc, char const *argv[]) {
       
  
     if ( bind(sockfd, (const struct sockaddr *)&servaddr,  
-            sizeof(servaddr)    ) < 0 ) 
+            sizeof(servaddr)) < 0 ) 
     { 
         perror("bind"); 
         exit(EXIT_FAILURE); 
     } 
       
-    unsigned int len, n; 
+    unsigned int len, n;
+    while(1){ 
     n = recvfrom(sockfd, (char *)buffer, MAXLINE,  
                 MSG_WAITALL, ( struct sockaddr *) &cliaddr, 
                 &len); 
 	if(n<MAXLINE)
     	buffer[n] = '\0'; 
-    printf("Cliente : %s\n", buffer); 
-    sendto(sockfd, (const char *)&hola, strlen(hola),  
+    while(true){
+    //printf("Cliente : %s\n", buffer); 
+    sendto(sockfd, (const char *)hola, strlen(hola),  
         MSG_CONFIRM, (const struct sockaddr *) &cliaddr, 
-            len); 
+            len);
+        } 
+    }
     printf("Mensaje de hola enviado.\n");  
       
     return 0; 

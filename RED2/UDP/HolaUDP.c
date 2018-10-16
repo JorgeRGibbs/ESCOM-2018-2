@@ -49,6 +49,7 @@ int main(int argc, char **argv)
   //memcpy(ipCliente,&cliente.sin_addr.s_addr,sizeof(cliente.sin_addr.s_addr));
   printf("Mensaje del cliente :%s",buffer);
   char *respuesta="Hola ClienteUDP";
+  while(1){
   sendto(idSocket,
          (const char*)respuesta,
          strlen(respuesta),
@@ -57,5 +58,6 @@ int main(int argc, char **argv)
          ,clienteTam);
   printf("respuesta enviada\n");
   //close(idSocket);
+  }
 }
   

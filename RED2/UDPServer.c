@@ -6,7 +6,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <arpa/inet.h>
- #include <ctype.h>
+#include <ctype.h>
 
 int main(){
   int udpSocket, nBytes;

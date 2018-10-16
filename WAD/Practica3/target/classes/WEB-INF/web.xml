@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<filter>
+		<filter-name>Filtro</filter-name>
+		<display-name>Filtro</display-name>
+		<description></description>
+		<filter-class>mx.ipn.escom.wad.filters.Filtro</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filtro</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Servlet1</display-name>
+		<servlet-name>Servlet1</servlet-name>
+		<servlet-class>mx.ipn.escom.wad.servlets.Servlet1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Servlet1</servlet-name>
+		<url-pattern>/Servlet1</url-pattern>
+	</servlet-mapping>
+</web-app>

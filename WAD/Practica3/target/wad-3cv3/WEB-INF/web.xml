@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  	<servlet>
+		<servlet-name>Servlet1</servlet-name>
+		<servlet-class>mx.ipn.escom.wad.servlets.Servlet1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Servlet1</servlet-name>
+		<url-pattern>/Servlet1</url-pattern>
+	</servlet-mapping>
+</web-app>
